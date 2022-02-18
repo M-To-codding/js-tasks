@@ -1,23 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import ProductsListContainer from "./task1ProductsListWithFilters/productsList/ProductsListContainer";
+import Twitter from "./task2TwitterElementImplementation/Twitter";
+import Loading from "./task2TwitterElementImplementation/Loading";
+import Badge from "./task2TwitterElementImplementation/Badge";
+import React from "react";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <header></header>
+      <main>
+        {/*task 1*/}
+        {/*<ProductsListContainer/>*/}
+
+        {/*task 2*/}
+        <Twitter username='tylermcginnis33'>
+          {(user) => user === null
+            ? <Loading />
+            : <Badge info={user} />}
+        </Twitter>
+
+      </main>
     </div>
   );
 }
