@@ -1,5 +1,5 @@
 import './App.css';
-import ProductsListContainer from "./task1ProductsListWithFilters/productsList/ProductsListContainer";
+import ProductsListContainer from "./task1ProductsListWithSorting/ProductsListContainer";
 import Twitter from "./task2TwitterElementImplementation/Twitter";
 import Loading from "./task2TwitterElementImplementation/Loading";
 import Badge from "./task2TwitterElementImplementation/Badge";
@@ -11,14 +11,11 @@ function App() {
       <header></header>
       <main>
         {/*task 1*/}
-        {/*<ProductsListContainer/>*/}
+        <ProductsListContainer/>
+
 
         {/*task 2*/}
-        <Twitter username='tylermcginnis33'>
-          {(user) => user === null
-            ? <Loading />
-            : <Badge info={user} />}
-        </Twitter>
+
 
       </main>
     </div>

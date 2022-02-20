@@ -11,7 +11,6 @@ function Twitter(props) {
     });
   }, []);
 
-
   return props.children(user);
 }
 
